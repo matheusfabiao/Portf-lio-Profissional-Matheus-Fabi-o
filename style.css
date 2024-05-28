@@ -23,6 +23,10 @@ body{
     min-height: 200vh;
 }
 
+main{
+    width: 100%;
+}
+
 .btn{
     background-color: var(--primary-color);
     color: #000;
@@ -96,7 +100,7 @@ body{
 #header-buttons{
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 #menu-icon{
@@ -134,6 +138,7 @@ body{
         width: 270px;
         min-height: 20vh;
         background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -151,5 +156,148 @@ body{
     }
     #navlinks.open-menu{
         right: 2%;
+    }
+}
+
+/* HERO */
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vb;
+    padding: 0 8%;
+    background-image: url('/img/hero-background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#hero .content-wrapper{
+    max-width: 1280px;
+    padding-right: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#hero .content-wrapper h2{
+    font-size: 2rem;
+    color: var(--text-alt-color);
+}
+
+#hero .content-wrapper h2 > span, #auto-type{
+    color: var(--primary-color);    
+}
+
+#hero .content-wrapper h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-alt-color);
+}
+
+#hero .content-wrapper .cta{
+    color: var(--text-alt-color);
+    margin-top: 50px;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#hero .content-wrapper .btn-cta{
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#hero .content-wrapper .btn-cta #btn-download{
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    padding: 5px 17px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#hero .content-wrapper .btn-cta #btn-download:hover{
+    background-color: var(--btn-hover);
+    color: var(--text-alt-color);
+    border-color: var(--btn-hover);
+}
+
+#btn-hero, #btn-download{
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1500px){
+    #hero .content-wrapper h1{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 1280px){
+    #hero .content-wrapper h1{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 1024px){
+    #hero .content-wrapper h1{
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 900px){
+    #hero .content-wrapper h1{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 768px){
+    #hero{
+        background-image: url('/img/alt\ hero-background.jpg');
+        background-position: center bottom;
+        background-color: rgba(0, 0, 0, 0.3);
+        background-blend-mode: color;
+    }
+    #hero .content-wrapper{
+        width: 100%;
+        padding-inline: 0;
+        justify-content: center;
+        align-items: center;
+        text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    #hero .content-wrapper h1{
+        font-size: 2.5rem;
+    }
+    #hero .content-wrapper h2{
+        font-size: 1.7rem;
+    }
+    #hero .content-wrapper .cta{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 460px){
+    #hero{
+        background-size: cover;
+    }
+    #hero .content-wrapper{
+        width: 100%;
+        padding-inline: 0;
+        justify-content: center;
+        align-items: center;
+        text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    #hero .content-wrapper h1{
+        font-size: 1.5rem;
+    }
+    #hero .content-wrapper h2{
+        font-size: 1.1rem;
+    }
+    #hero .content-wrapper .cta{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 360px){
+    #hero .content-wrapper h1{
+        font-size: 1.4rem;
     }
 }
